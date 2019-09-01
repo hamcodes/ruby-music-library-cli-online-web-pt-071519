@@ -10,11 +10,16 @@ class Song
   def self.destroy_all
     @@all.clear
   end
-  
-  def self.create(name)
-    new(name).save
-    self
-  end
+ 
+ def self.create(name)
+    song = new(name)
+    song.save
+    song
+  end 
+  # def self.create(name)
+  #   new(name).save
+  #   self
+  # end
 
   def self.find_by_name(name)
     self.all.find do |song|
