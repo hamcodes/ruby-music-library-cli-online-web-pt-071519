@@ -14,8 +14,9 @@ class Genre
   end
   
   def self.create(name)
-    new(name).save
-    self
+    genre = new(name)
+      genre.save
+      genre
   end
   
   def initialize(name)
